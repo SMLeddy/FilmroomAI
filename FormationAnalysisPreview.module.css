@@ -1,0 +1,85 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-3);
+}
+
+.summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing-2) var(--spacing-3);
+  background-color: var(--muted);
+  border-radius: var(--radius);
+  font-size: 0.875rem;
+}
+
+.totalPlays {
+  font-weight: 600;
+  color: var(--foreground);
+}
+
+.formationsCount {
+  color: var(--muted-foreground);
+}
+
+.topFormations {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+}
+
+.formationItem {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  gap: var(--spacing-2);
+  align-items: center;
+}
+
+.formationInfo {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-1);
+}
+
+.formationName {
+  font-weight: 500;
+  color: var(--foreground);
+  font-size: 0.875rem;
+}
+
+.formationCount {
+  font-size: 0.75rem;
+  color: var(--muted-foreground);
+}
+
+.formationBar {
+  width: 60px;
+  height: 4px;
+  background-color: var(--muted);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.formationBarFill {
+  height: 100%;
+  background-color: var(--primary);
+  transition: width var(--animation-duration-fast) ease;
+}
+
+.formationPercentage {
+  font-size: 0.75rem;
+  color: var(--muted-foreground);
+  font-family: var(--font-family-monospace);
+  min-width: 32px;
+  text-align: right;
+}
+
+.placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 120px;
+  color: var(--muted-foreground);
+  font-size: 0.875rem;
+}

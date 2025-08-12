@@ -1,0 +1,58 @@
+.manager {
+  /* Styles for the collaborator manager container */
+}
+
+.collaboratorList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+}
+
+.collaboratorRow {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-4);
+  padding: var(--spacing-2);
+  border-radius: var(--radius);
+  transition: background-color var(--animation-duration-fast) ease;
+}
+
+.collaboratorRow:hover {
+  background-color: var(--muted);
+}
+
+.userInfo {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-3);
+}
+
+.userDetails {
+  display: flex;
+  flex-direction: column;
+}
+
+.userName {
+  font-weight: 500;
+  color: var(--foreground);
+}
+
+.userEmail {
+  font-size: 0.875rem;
+  color: var(--muted-foreground);
+}
+
+.roleSelector {
+  width: 150px;
+}
+
+.error {
+  color: var(--error);
+  padding: var(--spacing-4);
+  background-color: color-mix(in srgb, var(--error) 10%, transparent);
+  border-radius: var(--radius);
+}

@@ -1,0 +1,89 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-6);
+}
+
+.sectionTitle {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: var(--foreground);
+  padding-left: var(--spacing-2);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: var(--spacing-6);
+}
+
+.card {
+  background-color: var(--card);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-6);
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  min-height: 400px;
+}
+
+.frontUsageCard {
+  grid-column: span 12;
+  min-height: 420px;
+}
+
+@media (min-width: 1024px) {
+  .frontUsageCard {
+    grid-column: span 7;
+  }
+}
+
+.personnelCard {
+  grid-column: span 12;
+  min-height: 420px;
+}
+
+@media (min-width: 1024px) {
+  .personnelCard {
+    grid-column: span 5;
+  }
+}
+
+.coverageCard {
+  grid-column: span 12;
+  min-height: 350px;
+}
+
+@media (min-width: 768px) {
+  .coverageCard {
+    grid-column: span 6;
+  }
+}
+
+.blitzCard {
+  grid-column: span 12;
+  min-height: 350px;
+}
+
+@media (min-width: 768px) {
+  .blitzCard {
+    grid-column: span 6;
+  }
+}
+
+.placeholder,
+.error {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+  background-color: var(--card);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-8);
+  color: var(--muted-foreground);
+}
+
+.error {
+  color: var(--error);
+  font-weight: 500;
+}

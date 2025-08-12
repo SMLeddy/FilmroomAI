@@ -1,0 +1,92 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-6);
+}
+
+.sectionTitle {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: var(--foreground);
+  padding-left: var(--spacing-2);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: var(--spacing-6);
+}
+
+.formationCard {
+  grid-column: span 12;
+}
+
+@media (min-width: 1024px) {
+  .formationCard {
+    grid-column: span 7;
+  }
+}
+
+.playCallCard {
+  grid-column: span 12;
+}
+
+@media (min-width: 1024px) {
+  .playCallCard {
+    grid-column: span 5;
+  }
+}
+
+.thirdDownCard {
+  grid-column: span 12;
+}
+
+@media (min-width: 768px) {
+  .thirdDownCard {
+    grid-column: span 6;
+  }
+}
+
+.redZoneCard {
+  grid-column: span 12;
+}
+
+@media (min-width: 768px) {
+  .redZoneCard {
+    grid-column: span 6;
+  }
+}
+
+.defensiveCard {
+  grid-column: span 12;
+}
+
+.placeholder,
+.error {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+  background-color: var(--card);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-8);
+  color: var(--muted-foreground);
+}
+
+.error {
+  color: var(--error);
+  font-weight: 500;
+}
+
+/* Detail sheet styles */
+.detailActions {
+  display: flex;
+  gap: var(--spacing-2);
+  margin-top: var(--spacing-4);
+}
+
+.detailContent {
+  padding: var(--spacing-6);
+  flex: 1;
+  overflow-y: auto;
+}

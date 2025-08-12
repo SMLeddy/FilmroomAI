@@ -1,0 +1,90 @@
+.manager {
+  padding: var(--spacing-8);
+  background-color: var(--background);
+  min-height: 100vh;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-6);
+}
+
+.title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--foreground);
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-4);
+}
+
+.viewToggle {
+  display: flex;
+  gap: var(--spacing-1);
+  background-color: var(--muted);
+  padding: var(--spacing-1);
+  border-radius: var(--radius);
+}
+
+.content {
+  /* Content area for libraries */
+}
+
+.libraryGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: var(--spacing-6);
+}
+
+.libraryGrid.listView {
+  grid-template-columns: 1fr;
+  gap: var(--spacing-3);
+}
+
+.emptyState, .errorState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: var(--spacing-16) var(--spacing-8);
+  background-color: var(--surface);
+  border: 1px dashed var(--border);
+  border-radius: var(--radius-lg);
+  color: var(--muted-foreground);
+}
+
+.emptyState h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--foreground);
+  margin-bottom: var(--spacing-2);
+}
+
+.emptyState p {
+  margin-bottom: var(--spacing-4);
+}
+
+.errorState {
+  color: var(--error);
+}
+
+.skeletonCard {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-3);
+  padding: var(--spacing-4);
+  background-color: var(--surface);
+  border-radius: var(--radius-lg);
+}
+
+.dialogContent {
+  max-width: 80vw;
+  width: 60rem;
+  max-height: 90vh;
+}

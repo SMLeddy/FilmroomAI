@@ -1,0 +1,75 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--foreground);
+  margin-bottom: var(--spacing-4);
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+  overflow-y: auto;
+  flex-grow: 1;
+}
+
+.skeletonItem {
+  height: 3.5rem;
+  border-radius: var(--radius);
+}
+
+.error,
+.empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  min-height: 100px;
+  background-color: var(--muted);
+  border-radius: var(--radius);
+  color: var(--muted-foreground);
+  font-size: 0.9rem;
+}
+
+.error {
+  color: var(--error);
+}
+
+.gameItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing-3) var(--spacing-4);
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  text-decoration: none;
+  color: var(--foreground);
+  transition: background-color var(--animation-duration-fast) ease, border-color var(--animation-duration-fast) ease;
+}
+
+.gameItem:hover {
+  background-color: var(--muted);
+  border-color: var(--primary);
+}
+
+.gameInfo {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-1);
+}
+
+.gameTitle {
+  font-weight: 500;
+}
+
+.gameDate {
+  font-size: 0.8rem;
+  color: var(--muted-foreground);
+}
