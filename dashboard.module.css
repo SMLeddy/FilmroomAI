@@ -1,0 +1,374 @@
+.dashboard {
+  min-height: 100vh;
+  background-color: var(--background);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+.dashboardHeader {
+  background-color: var(--surface);
+  border-bottom: 1px solid var(--border);
+  padding: var(--spacing-6);
+  flex-shrink: 0;
+  position: sticky;
+  top: 0;
+  z-index: var(--z-nav-sticky);
+}
+
+.headerContent {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--spacing-6);
+}
+
+.headerTitle {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-3);
+}
+
+.headerTitle h1 {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: var(--foreground);
+  margin: 0;
+}
+
+.headerIcon {
+  width: 2rem;
+  height: 2rem;
+  color: var(--primary);
+}
+
+.headerActions {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-4);
+}
+
+/* Main Content */
+.mainContent {
+  flex: 1;
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+  padding: var(--spacing-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-8);
+}
+
+/* Quick Stats Section */
+.quickStatsSection {
+  width: 100%;
+}
+
+/* Main Grid Layout */
+.mainGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-8);
+  width: 100%;
+}
+
+.leftColumn,
+.rightColumn {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-6);
+}
+
+.gridItem {
+  flex: 1;
+}
+
+/* Opponent Analysis Section */
+.opponentAnalysisSection {
+  width: 100%;
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-6);
+  box-shadow: var(--shadow);
+}
+
+.opponentAnalysisHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-6);
+  gap: var(--spacing-4);
+}
+
+.opponentAnalysisTitle {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-3);
+}
+
+.opponentAnalysisTitle h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--foreground);
+  margin: 0;
+}
+
+.opponentSelector {
+  min-width: 320px;
+  flex-shrink: 0;
+}
+
+
+
+/* Opponent Collapsible */
+.opponentCollapsible {
+  width: 100%;
+}
+
+.collapsibleTrigger {
+  width: 100%;
+  padding: var(--spacing-6);
+  background-color: var(--muted);
+  border: none;
+  border-radius: var(--radius-md);
+  text-align: left;
+  transition: background-color var(--animation-duration-fast);
+  cursor: pointer;
+}
+
+.collapsibleTrigger:hover {
+  background-color: var(--card);
+}
+
+.collapsibleTrigger[data-state="open"] .chevronIcon {
+  transform: rotate(180deg);
+}
+
+.triggerContent {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+}
+
+.triggerHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--spacing-4);
+}
+
+.triggerHeader h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--foreground);
+  margin: 0;
+}
+
+.chevronIcon {
+  width: 1.25rem;
+  height: 1.25rem;
+  color: var(--muted-foreground);
+  transition: transform var(--animation-duration-fast);
+  flex-shrink: 0;
+}
+
+.triggerSubtext {
+  font-size: 0.875rem;
+  color: var(--muted-foreground);
+  margin: 0;
+}
+
+.collapsibleContent {
+  padding: var(--spacing-6);
+  background-color: var(--background);
+  border-radius: 0 0 var(--radius-md) var(--radius-md);
+  border: 1px solid var(--border);
+  border-top: none;
+}
+
+.summaryGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--spacing-4);
+  margin-bottom: var(--spacing-6);
+}
+
+.summaryCard {
+  background-color: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: var(--spacing-4);
+  display: flex;
+  gap: var(--spacing-3);
+  align-items: flex-start;
+}
+
+.summaryIcon {
+  background-color: var(--primary);
+  color: var(--primary-foreground);
+  padding: var(--spacing-2);
+  border-radius: var(--radius);
+  flex-shrink: 0;
+}
+
+.summaryContent h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--foreground);
+  margin: 0 0 var(--spacing-2) 0;
+}
+
+.summaryContent p {
+  font-size: 0.875rem;
+  color: var(--muted-foreground);
+  margin: 0 0 var(--spacing-1) 0;
+}
+
+.summaryContent p:last-child {
+  margin-bottom: 0;
+}
+
+.viewFullAnalysis {
+  display: flex;
+  justify-content: center;
+  padding-top: var(--spacing-4);
+  border-top: 1px solid var(--border);
+}
+
+/* Placeholder for Opponent Analysis */
+.placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-16) var(--spacing-6);
+  text-align: center;
+  color: var(--muted-foreground);
+  background-color: var(--background);
+  border: 2px dashed var(--border);
+  border-radius: var(--radius-md);
+}
+
+.placeholderIcon {
+  width: 3rem;
+  height: 3rem;
+  color: var(--muted-foreground);
+  margin-bottom: var(--spacing-4);
+}
+
+.placeholder h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--foreground);
+  margin: 0 0 var(--spacing-2) 0;
+}
+
+.placeholder p {
+  font-size: 1rem;
+  margin: 0;
+  max-width: 500px;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .mainGrid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-6);
+  }
+  
+  .opponentAnalysisHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-4);
+  }
+  
+  .opponentSelector {
+    min-width: 280px;
+    align-self: stretch;
+  }
+  
+  .summaryGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboardHeader {
+    padding: var(--spacing-4);
+  }
+  
+  .mainContent {
+    padding: var(--spacing-4);
+    gap: var(--spacing-6);
+  }
+  
+  .headerContent {
+    flex-direction: column;
+    gap: var(--spacing-4);
+    align-items: stretch;
+  }
+  
+  .headerTitle h1 {
+    font-size: 1.5rem;
+  }
+  
+  .headerActions {
+    justify-content: center;
+  }
+  
+  .opponentAnalysisSection {
+    padding: var(--spacing-4);
+  }
+  
+  .opponentAnalysisTitle h2 {
+    font-size: 1.25rem;
+  }
+  
+  .opponentSelector {
+    width: 100%;
+    min-width: auto;
+  }
+  
+  .collapsibleTrigger {
+    padding: var(--spacing-4);
+  }
+  
+  .collapsibleContent {
+    padding: var(--spacing-4);
+  }
+  
+  .triggerHeader h3 {
+    font-size: 1.125rem;
+  }
+  
+  .placeholder {
+    padding: var(--spacing-12) var(--spacing-4);
+  }
+  
+  .placeholder h3 {
+    font-size: 1.125rem;
+  }
+  
+  .placeholder p {
+    font-size: 0.875rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .mainContent {
+    gap: var(--spacing-4);
+  }
+  
+  .leftColumn,
+  .rightColumn {
+    gap: var(--spacing-4);
+  }
+  
+  .opponentAnalysisHeader {
+    gap: var(--spacing-3);
+  }
+}

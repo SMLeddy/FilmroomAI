@@ -1,0 +1,84 @@
+.pageContainer {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: var(--background);
+}
+
+.breadcrumbContainer {
+  padding: var(--spacing-4) var(--spacing-6) 0;
+  background-color: var(--surface);
+  border-bottom: 1px solid var(--border);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: var(--spacing-4) var(--spacing-6) var(--spacing-6);
+  background-color: var(--surface);
+}
+
+.title {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: var(--foreground);
+  margin: 0 0 var(--spacing-1) 0;
+  font-family: var(--font-family-heading);
+}
+
+.subtitle {
+  color: var(--muted-foreground);
+  margin: 0;
+  font-size: 0.875rem;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-3);
+  flex-wrap: wrap;
+}
+
+.searchContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.searchIcon {
+  position: absolute;
+  left: var(--spacing-3);
+  width: 1rem;
+  height: 1rem;
+  color: var(--muted-foreground);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.searchInput {
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+  width: 20rem;
+}
+
+.clearSearchButton {
+  position: absolute;
+  right: var(--spacing-1);
+  width: 1.5rem;
+  height: 1.5rem;
+  padding: 0;
+  z-index: 1;
+}
+
+.mainContent {
+  flex: 1;
+  overflow: hidden;
+  padding: var(--spacing-6);
+  border-top: 1px solid var(--border);
+}
+
+.libraryIcon {
+  width: 1rem;
+  height: 1rem;
+}
