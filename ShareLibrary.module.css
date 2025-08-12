@@ -1,0 +1,94 @@
+.shareContainer {
+  padding: var(--spacing-4);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: var(--spacing-6);
+}
+
+.title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--foreground);
+  margin-bottom: var(--spacing-1);
+}
+
+.description {
+  font-size: 0.875rem;
+  color: var(--muted-foreground);
+}
+
+.tabs {
+  width: 100%;
+}
+
+.tabsList {
+  width: 100%;
+  margin-bottom: var(--spacing-4);
+}
+
+.tabTrigger {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  flex: 1;
+}
+
+.tabContent {
+  min-height: 400px;
+}
+
+.collaboratorSection {
+  padding: var(--spacing-4);
+}
+
+.sectionTitle {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: var(--spacing-1);
+}
+
+.sectionDescription {
+  font-size: 0.875rem;
+  color: var(--muted-foreground);
+  margin-bottom: var(--spacing-4);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4);
+}
+
+.inputGroup {
+  display: flex;
+  gap: var(--spacing-2);
+  align-items: flex-start;
+}
+
+.emailInput {
+  flex-grow: 1;
+}
+
+.roleSelect {
+  width: 120px;
+}
+
+.submitButton {
+  align-self: flex-end;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}

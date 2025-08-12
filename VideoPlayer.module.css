@@ -1,0 +1,124 @@
+.videoContainer {
+  position: relative;
+  width: 100%;
+  background-color: #000;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+}
+
+.videoElement {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.controlsOverlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: var(--spacing-2) var(--spacing-4);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+  opacity: 0;
+  transition: opacity var(--animation-duration-fast) ease-in-out;
+}
+
+.videoContainer:hover .controlsOverlay {
+  opacity: 1;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  color: white;
+}
+
+.timeDisplay {
+  font-family: var(--font-family-monospace);
+  font-size: 0.875rem;
+  padding: 0 var(--spacing-2);
+  user-select: none;
+}
+
+.spacer {
+  flex-grow: 1;
+}
+
+.videoContainer:fullscreen {
+  max-width: none;
+  width: 100%;
+  height: 100%;
+}
+
+.videoContainer:fullscreen .videoElement {
+  object-fit: contain;
+}
+
+.loadingOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  gap: var(--spacing-2);
+  font-size: 0.875rem;
+}
+
+.spinner {
+  width: 2rem;
+  height: 2rem;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.errorOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.9);
+  color: white;
+  gap: var(--spacing-3);
+  padding: var(--spacing-4);
+  text-align: center;
+}
+
+.errorIcon {
+  width: 3rem;
+  height: 3rem;
+  color: var(--error);
+}
+
+.errorMessage {
+  font-size: 0.875rem;
+  max-width: 300px;
+}
+
+.urlInfo {
+  font-family: var(--font-family-monospace);
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.7);
+  padding: 0 var(--spacing-2);
+  user-select: none;
+}
